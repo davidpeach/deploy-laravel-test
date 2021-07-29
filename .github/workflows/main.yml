@@ -28,8 +28,8 @@ jobs:
     - name: Deploy to production
       uses: appleboy/ssh-action@master
       with:
-        username: ${{ secrets.MARION_USERNAME }}
-        host: ${{ secrets.MARION_IP_ADDRESS }}
-        key: ${{ secrets.MARION_PRIVATE_KEY }}
+        username: ${{ secrets.SERVER_USERNAME }}
+        host: ${{ secrets.SERVER_IP_ADDRESS }}
+        key: ${{ secrets.SERVER_KEY }}
         script: 'cd /var/www/my_webapp/www/labs.davidpeach.co.uk && ./server_deploy.sh'
 
